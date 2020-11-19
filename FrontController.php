@@ -20,11 +20,18 @@ class FrontController extends FrontController_Abstract
 
     protected function init()
     {
-
+        
     }
 
     protected function handleRequest()
     {
-
+        $context = new CommandContext();
+        //$req = (string) $context->get('request');
+        $handler = RequestHandlerFactory::makeRequestHandler();
+        
+        if($handler->execute($context) === false)
+        {
+            //do some error handling
+        }
     }
 }
