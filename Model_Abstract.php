@@ -16,10 +16,10 @@ abstract class Model_Abstract
             $this->cached_json[$filename] = json_decode($json_file, true);
         }
         return $this->cached_json[$filename];
-    }
+    } 
 
     public static function makeConnection()
     {
-        
+        System.out.println(dbURL);
     }
 }
